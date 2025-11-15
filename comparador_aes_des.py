@@ -3,11 +3,14 @@ from Crypto.Util.Padding import pad, unpad
 from Crypto.Random import get_random_bytes
 import time
 import sys
+import os # Adicionei esta linha para importar o módulo 'os'
+import numpy as np # Adicionei esta linha para importar numpy
+import matplotlib.pyplot as plt # Adicionei esta linha para importar matplotlib
 # ------------------------------------------------------------
 # PASSO 0: INSTALAR BIBLIOTECAS NECESSÁRIAS
 # ------------------------------------------------------------
 # Descomente a linha abaixo se estiver executando em um notebook
-# !pip install pycryptodome matplotlib
+!pip install pycryptodome matplotlib
 
 # ------------------------------------------------------------
 # TRABALHO DE CRIPTOGRAFIA SIMÉTRICA - TEMA 1
@@ -144,7 +147,8 @@ class CipherComparator:
             encrypt_ms = result["encrypt_time"] * 1000
             decrypt_ms = result["decrypt_time"] * 1000
 
-            print(f"{result['algorithm']:<15} {result['security_bits']:<10} "
+            print(f"{
+result['algorithm']:<15} {result['security_bits']:<10} "
                   f"{encrypt_ms:<12.4f} {decrypt_ms:<14.4f} "
                   f"{result['throughput_encrypt_mb_s']:<28.2f} "
                   f"{result['throughput_decrypt_mb_s']:<30.2f} "

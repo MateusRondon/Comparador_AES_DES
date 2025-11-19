@@ -1,3 +1,4 @@
+!pip install pycryptodome matplotlib
 from Crypto.Cipher import AES, DES, DES3
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Random import get_random_bytes
@@ -10,7 +11,7 @@ import matplotlib.pyplot as plt # Adicionei esta linha para importar matplotlib
 # PASSO 0: INSTALAR BIBLIOTECAS NECESSÁRIAS
 # ------------------------------------------------------------
 # Descomente a linha abaixo se estiver executando em um notebook
-!pip install pycryptodome matplotlib
+
 
 # ------------------------------------------------------------
 # TRABALHO DE CRIPTOGRAFIA SIMÉTRICA - TEMA 1
